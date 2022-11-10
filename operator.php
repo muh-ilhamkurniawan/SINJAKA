@@ -78,7 +78,6 @@ error_reporting(0);
     <hr>
     <div class="link">
                 <a href="view.php" class="tombol-link">Halaman Peron</a> 
-                <a href="modif-data\index.php" class="tombol-link">Modifikasi Data</a> 
     </div>
 
     <div class="konten">
@@ -109,7 +108,7 @@ error_reporting(0);
                         <td><?php echo $row1['nama_ka']; ?></td>
                         <td><?php echo $row1['tujuan']; ?></td>
                         <td><?php echo $row1['jam_berangkat']; ?></td>
-                        <td><input type="submit" name="delete1" value="Hapus" class="tombol-hapus"></td>
+                        <td><input type="submit" name="delete1" onclick="return confirm('Yakin Hapus?')" value="Hapus" class="tombol-hapus"></td>
                 </tr>
                 <tr>
                     <td>2</td>
@@ -119,7 +118,7 @@ error_reporting(0);
                         <td><?php echo $row2['nama_ka']; ?></td>
                         <td><?php echo $row2['tujuan']; ?></td>
                         <td><?php echo $row2['jam_berangkat']; ?></td>
-                        <td><input type="submit" name="delete2" value="Hapus" class="tombol-hapus"></td>
+                        <td><input type="submit" name="delete2" onclick="return confirm('Yakin Hapus?')" value="Hapus" class="tombol-hapus"></td>
                 </tr>
                 <tr>
                     <td>3</td>
@@ -129,7 +128,7 @@ error_reporting(0);
                         <td><?php echo $row3['nama_ka']; ?></td>
                         <td><?php echo $row3['tujuan']; ?></td>
                         <td><?php echo $row3['jam_berangkat']; ?></td>
-                        <td><input type="submit" name="delete3" value="Hapus" class="tombol-hapus"></td>
+                        <td><input type="submit" name="delete3" onclick="return confirm('Yakin Hapus?')" value="Hapus" class="tombol-hapus"></td>
                 </tr>
                 <tr>
                     <td>4</td>
@@ -139,7 +138,7 @@ error_reporting(0);
                         <td><?php echo $row4['nama_ka']; ?></td>
                         <td><?php echo $row4['tujuan']; ?></td>
                         <td><?php echo $row4['jam_berangkat']; ?></td>
-                        <td><input type="submit" name="delete4" value="Hapus" class="tombol-hapus"></td>
+                        <td><input type="submit" name="delete4" onclick="return confirm('Yakin Hapus?')" value="Hapus" class="tombol-hapus"></td>
                 <tr>
                     <td>5</td>
                     <td><input type="text" name="jalurka5" class="upper"></td>
@@ -148,7 +147,7 @@ error_reporting(0);
                         <td><?php echo $row5['nama_ka']; ?></td>
                         <td><?php echo $row5['tujuan']; ?></td>
                         <td><?php echo $row5['jam_berangkat']; ?></td>
-                        <td><input type="submit" name="delete5" value="Hapus" class="tombol-hapus"></td>
+                        <td><input type="submit" name="delete5" onclick="return confirm('Yakin Hapus?')" value="Hapus" class="tombol-hapus"></td>
                 </tr>   
             </table>          
         </form>
@@ -194,7 +193,7 @@ error_reporting(0);
         <div class="side-link">
             <div class="import">
                 <form method="post" enctype="multipart/form-data" action="modif-data\excel.php">
-                    Pilih File: (tipe .xls)
+                    Pilih File: <span class="samar"> (tipe .xls) </span>
                     <input class="form-control" name="fileexcel" type="file" required="required" value="Masukkan File tipe .xls">
                         <br>
                     <button type="submit" name='simpan' class="tombol-link">Submit</button>
@@ -206,7 +205,7 @@ error_reporting(0);
                    <button href="modif-data\tambah.php" type="button" class="tombol-tambah " name="tambah">Tambah Data</button>
                 </a> 
                 <a>
-                    <input type="submit" name="hapussemua" value="Hapus Semua" class="tombol-hapus ">
+                    <input type="submit" name="hapussemua" onclick="return confirm('Yakin Hapus Semua Data?')" value="Hapus Semua" class="tombol-hapus ">
                  </a>
             </form>
         </div>
@@ -257,7 +256,7 @@ error_reporting(0);
                 <td width="5%"><?php echo $data['keterangan']; ?></td>
                 <td width="15%">
 
-                    <a href="modif-data\delete.php?id=<?php echo $data["id"];?>" class="tombol-hapus"  href="#">
+                    <a href="modif-data\delete.php?id=<?php echo $data["id"];?>" onclick="return confirm('Yakin Hapus?')" class="tombol-hapus"  href="#">
                         <img src="aset\trash.svg" alt="">
                     </a>
                     <br> <br>
