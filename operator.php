@@ -14,18 +14,22 @@ error_reporting(0);
 </head>
 <body>
     <div id="container"></div>
+    <!-- menampilkan navbar -->
     <nav>
         <div class="nav-desc">
+            <!-- menampilkan logo KAI -->
             <div class="logo">
                 <img src="aset/logo.png" class="featured-image" />
             </div>
+            <!-- menampilkan nama stasiun -->
             <div class="stasiun">
                 OPERATOR STASIUN PURWOKERTO
             </div>
         </div>
-        
+        <!-- menampilkan date time -->
         <div class="nav-time">
         <?php
+        //mengganti hari ke bahasa indonesia
         function hariIndo ($hariInggris) {
             switch ($hariInggris) {
                 case 'Sunday': return 'Minggu';
@@ -41,6 +45,7 @@ error_reporting(0);
         ?>
         
         <?php
+        //set waktu
         date_default_timezone_set("Asia/jakarta"); 
         $hariBahasaInggris = date('l');
         $hariBahasaIndonesia = hariIndo($hariBahasaInggris);
@@ -51,6 +56,7 @@ error_reporting(0);
         <span style='padding-right: 20px;' class="jam"> <?php echo date('d-m-Y'); ?></span>
         <br/> 
         <span id="jam" class="jam" style='padding-right: 20px;'></span>
+        <!-- menampilkan waktu secara live time -->
         <script type="text/javascript">
             window.onload = function() { jam(); }
         
@@ -76,16 +82,21 @@ error_reporting(0);
     </nav>
 
     <hr>
+    <!-- menampilkan tombol menuju halaman penumpang -->
     <div class="link">
                 <a href="view.php" class="tombol-link">Halaman Peron</a> 
     </div>
 
+    <!-- menampilkan tabel pemilihan -->
     <div class="konten">
         <h2>Tabel Pemilihan</h2>
         <hr>
     <?php
+    //memasukan koneksi
     include "koneksi.php";
+    //memasukan fungsi update dan isi data
     include "prosesupdate.php";
+    //memasukan fungsi hapus data
     include "prosesdeleteinput.php";
     ?>    
         <form action='<?php $_SERVER['PHP_SELF']; ?>' name='update' method='post' enctype='multipart/form-data'>
@@ -105,58 +116,58 @@ error_reporting(0);
                     <td><input type="text" name="jalurka1" class="upper"></td>
                     <td><input type="submit" name="update1" value="Simpan" class="tombol-link"></td>
                     <td><?php echo $row1['no_ka']; ?></td>
-                        <td><?php echo $row1['nama_ka']; ?></td>
-                        <td><?php echo $row1['tujuan']; ?></td>
-                        <td><?php echo $row1['jam_berangkat']; ?></td>
-                        <td><input type="submit" name="delete1" onclick="return confirm('Yakin Hapus?')" value="Hapus" class="tombol-hapus"></td>
+                    <td><?php echo $row1['nama_ka']; ?></td>
+                    <td><?php echo $row1['tujuan']; ?></td>
+                    <td><?php echo $row1['jam_berangkat']; ?></td>
+                    <td><input type="submit" name="delete1" onclick="return confirm('Yakin Hapus?')" value="Hapus" class="tombol-hapus"></td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td><input type="text" name="jalurka2" class="upper"></td>
                     <td><input type="submit" name="update2" value="Simpan" class="tombol-link"></td>
                     <td><?php echo $row2['no_ka']; ?></td>
-                        <td><?php echo $row2['nama_ka']; ?></td>
-                        <td><?php echo $row2['tujuan']; ?></td>
-                        <td><?php echo $row2['jam_berangkat']; ?></td>
-                        <td><input type="submit" name="delete2" onclick="return confirm('Yakin Hapus?')" value="Hapus" class="tombol-hapus"></td>
+                    <td><?php echo $row2['nama_ka']; ?></td>
+                    <td><?php echo $row2['tujuan']; ?></td>
+                    <td><?php echo $row2['jam_berangkat']; ?></td>
+                    <td><input type="submit" name="delete2" onclick="return confirm('Yakin Hapus?')" value="Hapus" class="tombol-hapus"></td>
                 </tr>
                 <tr>
                     <td>3</td>
                     <td><input type="text" name="jalurka3" class="upper"></td>
                     <td><input type="submit" name="update3" value="Simpan" class="tombol-link"></td>
                     <td><?php echo $row3['no_ka']; ?></td>
-                        <td><?php echo $row3['nama_ka']; ?></td>
-                        <td><?php echo $row3['tujuan']; ?></td>
-                        <td><?php echo $row3['jam_berangkat']; ?></td>
-                        <td><input type="submit" name="delete3" onclick="return confirm('Yakin Hapus?')" value="Hapus" class="tombol-hapus"></td>
+                    <td><?php echo $row3['nama_ka']; ?></td>
+                    <td><?php echo $row3['tujuan']; ?></td>
+                    <td><?php echo $row3['jam_berangkat']; ?></td>
+                    <td><input type="submit" name="delete3" onclick="return confirm('Yakin Hapus?')" value="Hapus" class="tombol-hapus"></td>
                 </tr>
                 <tr>
                     <td>4</td>
                     <td><input type="text" name="jalurka4" class="upper"></td>
                     <td><input type="submit" name="update4" value="Simpan" class="tombol-link"></td>
                     <td><?php echo $row4['no_ka']; ?></td>
-                        <td><?php echo $row4['nama_ka']; ?></td>
-                        <td><?php echo $row4['tujuan']; ?></td>
-                        <td><?php echo $row4['jam_berangkat']; ?></td>
-                        <td><input type="submit" name="delete4" onclick="return confirm('Yakin Hapus?')" value="Hapus" class="tombol-hapus"></td>
+                    <td><?php echo $row4['nama_ka']; ?></td>
+                    <td><?php echo $row4['tujuan']; ?></td>
+                    <td><?php echo $row4['jam_berangkat']; ?></td>
+                    <td><input type="submit" name="delete4" onclick="return confirm('Yakin Hapus?')" value="Hapus" class="tombol-hapus"></td>
                 <tr>
                     <td>5</td>
                     <td><input type="text" name="jalurka5" class="upper"></td>
                     <td><input type="submit" name="update5" value="Simpan" class="tombol-link"></td>
                     <td><?php echo $row5['no_ka']; ?></td>
-                        <td><?php echo $row5['nama_ka']; ?></td>
-                        <td><?php echo $row5['tujuan']; ?></td>
-                        <td><?php echo $row5['jam_berangkat']; ?></td>
-                        <td><input type="submit" name="delete5" onclick="return confirm('Yakin Hapus?')" value="Hapus" class="tombol-hapus"></td>
+                    <td><?php echo $row5['nama_ka']; ?></td>
+                    <td><?php echo $row5['tujuan']; ?></td>
+                    <td><?php echo $row5['jam_berangkat']; ?></td>
+                    <td><input type="submit" name="delete5" onclick="return confirm('Yakin Hapus?')" value="Hapus" class="tombol-hapus"></td>
                 </tr>   
             </table>          
         </form>
     </div>
-
+    <!-- menampilkan tabel data perjalanan -->
     <h2>Tabel Data Perjalanan KA</h2>
         <hr>
     <?php
-
+        //fungsi hapus semua
         $koneksi = mysqli_connect("localhost","root","","kai_db");
 
         if(isset($_POST['hapussemua'])){
@@ -171,7 +182,7 @@ error_reporting(0);
                     <?php
                 }
         }
-
+        //fungsi cari
         if(isset($_GET["cari"])){
             $daftardata = $_GET["cari"];
             $search = "SELECT * FROM departure 
@@ -182,7 +193,9 @@ error_reporting(0);
                     $search = "SELECT * FROM departure ORDER BY purwokerto_berangkat";		
         }
     ?>
+    <!-- menampilkan bagian bawah -->
     <div>
+        <!-- menampilan box pencarian -->
         <div class="search">
             <form action="operator.php" method="get">
                     <input type="text" name="cari" id="search" for="search" width="5%" size="40" class="upper" autofocus>
@@ -190,7 +203,9 @@ error_reporting(0);
             </form>
         </div>
 
+        <!-- menampilkan fungsi di samping-->
         <div class="side-link">
+            <!-- menampilkan tombol import -->
             <div class="import">
                 <form method="post" enctype="multipart/form-data" action="modif-data\excel.php">
                     Pilih File: <span class="samar"> (tipe .xls) </span>
@@ -200,6 +215,7 @@ error_reporting(0);
                 </form>
             </div>
                                 
+            <!-- menampilkan tombol tambah dan hapus semua -->
             <form action="" method="post">
                 <a href="modif-data\tambah.php">
                    <button href="modif-data\tambah.php" type="button" class="tombol-tambah " name="tambah">Tambah Data</button>
@@ -211,6 +227,7 @@ error_reporting(0);
         </div>
 
 
+        <!-- menampilkan tabel -->
         <table class="table-jadwal" width="75%" cellpadding="9" cellspacing="0">
         <thead>
             <tr>
@@ -229,7 +246,7 @@ error_reporting(0);
         <tbody>
 
         <?php
-        // membuat koneksi ke database 
+        //membuat koneksi ke database 
         $koneksi = mysqli_connect("localhost", "root", "", "kai_db");
                 
         //membuat variabel angka
@@ -256,6 +273,7 @@ error_reporting(0);
                 <td width="5%"><?php echo $data['keterangan']; ?></td>
                 <td width="15%">
 
+                    <!-- menampilkan tombol hapus dan edit -->
                     <a href="modif-data\delete.php?id=<?php echo $data["id"];?>" onclick="return confirm('Yakin Hapus?')" class="tombol-hapus"  href="#">
                         <img src="aset\trash.svg" alt="">
                     </a>
