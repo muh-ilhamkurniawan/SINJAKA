@@ -38,12 +38,6 @@ td {
 .upper {
   text-transform: uppercase;
 }
-.form {
-  float: left;
-  width: 20%;
-  padding-left: 1%;
-  text-align: center;
-}
 .side-link {
   float: left;
   width: 20%;
@@ -53,18 +47,7 @@ td {
   border-radius: 5px;
   margin: 1%;
 }
-.jadwal {
-  float: right;
-  width: 74%;
-  padding-right: 1%;
-}
-.isi {
-  color: rgba(255, 255, 255, 1);
-}
-tr .isi {
-  color: rgba(255, 255, 255, 1);
-  opacity: 1;
-}
+
 tr {
   text-align: center;
 }
@@ -80,18 +63,12 @@ nav {
   float: left;
   width: 80%;
 }
-i {
-  height: 20px;
-  font-weight: lighter;
-}
-
 .logo {
   padding-top: 30px;
   float: left;
   width: 25%;
   align-items: center;
 }
-
 .stasiun {
   padding-top: 20px;
   text-align: center;
@@ -99,11 +76,6 @@ i {
   width: 75%;
   font-size: 45px;
   font-weight: 800;
-}
-.hari {
-  font-size: 28px;
-  font-weight: bold;
-  padding-right: 20px;
 }
 .jam {
   font-size: 30px;
@@ -179,18 +151,6 @@ main {
   display: block;
   height: 300px;
   overflow-y: scroll;
-}
-.klik {
-  background: #2c97df;
-  border-bottom: 0;
-}
-.submit {
-  background: #2c97df;
-  color: white;
-  border: 0px;
-  padding: 5px 10px;
-  text-decoration: none;
-  width: 100%;
 }
 footer {
   margin-top: 10px;
