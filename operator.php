@@ -209,9 +209,9 @@ error_reporting(0);
             <div class="import">
                 <form method="post" enctype="multipart/form-data" action="modif-data\excel.php">
                     Pilih File: <span class="samar"> (tipe .xls) </span>
-                    <input class="form-control" name="fileexcel" type="file" required="required" value="Masukkan File tipe .xls">
+                    <input class="form-control" name="fileexcel" type="file" required="required" value="Masukkan file tipe .xls">
                         <br>
-                    <button type="submit" name='simpan' class="tombol-link">Submit</button>
+                    <button type="submit" name='simpan' onclick="return confirm('Yakin Import? Semua data lama akan dihapus dan digantikan yang baru')" class="tombol-link">Submit</button>
                 </form>
             </div>
                                 
