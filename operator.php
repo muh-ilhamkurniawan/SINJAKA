@@ -230,7 +230,7 @@ error_reporting(0);
         <!-- menampilkan tabel -->
         <table class="table-jadwal" width="75%" cellpadding="9" cellspacing="0">
         <thead>
-            <tr>
+            <tr class="header">
                 <th >No</th>
                 <th >No. KA</th>
                 <th >Nama KA</th>
