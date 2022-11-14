@@ -107,7 +107,7 @@ error_reporting(0);
                     <th width="10%">Aksi</th>
                     <th width="10%">No KA</th>
                     <th width="35%">Nama KA</th>
-                    <th width="10%">Relasi</th>
+                    <th width="10%">Tujuan</th>
                     <th width="10%">Keberangkatan</th>
                     <th width="10%">Aksi</th>
                 </tr>
@@ -234,7 +234,7 @@ error_reporting(0);
                 <th >No</th>
                 <th >No. KA</th>
                 <th >Nama KA</th>
-                <th >Relasi</th>
+                <th >Tujuan</th>
                 <th >Jalur</th>
                 <th >Datang</th>
                 <th >Berangkat</th>

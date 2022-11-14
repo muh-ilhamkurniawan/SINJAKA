@@ -73,7 +73,7 @@ VALUES('','$no','$no_ka','$nama_ka','$relasi',
                 </div>
 
                 <div class="form-group">
-                  <label>Relasi</label>
+                  <label>Tujuan</label>
                   <input type="text" name="relasi" class="form-control">
                 </div>
 

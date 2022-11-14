@@ -26,6 +26,14 @@ h2 {
 }
 td {
   border-bottom: 1px black solid;
+  background-color: #ebebeb;
+}
+.table-form td {
+  background-color: #d2dcfa;
+}
+.table-form th {
+  background-color: #355fde;
+  color: white;
 }
 .link {
   overflow: auto;
@@ -155,7 +163,7 @@ main {
 .table-jadwal {
   margin: 0 auto;
   display: block;
-  height: 300px;
+  height: 450px;
   overflow-y: scroll;
 }
 footer {

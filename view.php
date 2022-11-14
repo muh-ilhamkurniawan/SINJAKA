@@ -10,7 +10,7 @@
         $url;
     }
     $page=$url;
-    $sec="23";
+    $sec="15";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -89,12 +89,12 @@
             </div>
         </nav>
         <!-- menampilkan tabel peron -->
-        <table align='center' width="98%" cellspacing="4" cellpadding="0">
-            <tr style="background-color: #ee6b1e;">
+        <table align='center' width="99%" cellspacing="4" cellpadding="0">
+            <tr>
                 <th>JALUR<br/> <i>TRACK</i></th>
                 <th>NAMA KA <br/> <i>TRAIN NAME</i></th>
                 <th>TUJUAN <br/> <i>DESTINATION</i></th>
-                <th>WAKTU BERANGKAT <br/> <i>DEPARTURE TIME</i></th>
+                <th>BERANGKAT <br/> <i>DEPARTURE</i></th>
             </tr>
         <?php
             //menampilkan KA sesuai jalur
@@ -104,10 +104,10 @@
             while($row = mysqli_fetch_array($query)){
             echo "
             <tr>
-                <td width='15%'> <span class='isi'><div class='jalur'>$jalur</div> </span></td>
-                <td width='50%'><span class='isi'>$row[no_ka] - $row[nama_ka]</span></td>
-                <td width='15%'><span class='isi'>$row[tujuan]</span></td>
-                <td width='20%' ><span class='isi'>$row[jam_berangkat]</span></td>
+                <td width='10%'> <span class='isi'><div class='jalur'>$jalur</div> </span></td>
+                <td width='54%'><span class='isi'>$row[nama_ka] - $row[no_ka]</span></td>
+                <td width='23%'><span class='isi'>$row[tujuan]</span></td>
+                <td width='13%' ><span class='isi'>$row[jam_berangkat]</span></td>
                 </tr>
             ";
             $jalur++;
@@ -116,7 +116,7 @@
         </table>
         <!-- menampilkan footer -->
         <footer>
-            <p><marquee>PT KERETA API INDONESIA (PERSERO) DAOP V PURWOKERTO</marquee></p>
+            <p><marquee scrollamount="14" loop="1">PT KERETA API INDONESIA (PERSERO) DAOP 5 PURWOKERTO</marquee></p>
         </footer>
 </body>
 </html>
