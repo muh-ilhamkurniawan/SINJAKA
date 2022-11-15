@@ -228,7 +228,7 @@ error_reporting(0);
 
 
         <!-- menampilkan tabel -->
-        <table class="table-jadwal" width="75%" cellpadding="9" cellspacing="0">
+        <table class="table-jadwal" width="80%" cellpadding="9" cellspacing="0">
         <thead>
             <tr class="header">
                 <th >No</th>
@@ -240,7 +240,7 @@ error_reporting(0);
                 <th >Berangkat</th>
                 <th >Stamformasi</th>
                 <th >Keterangan</th>
-                <th >Aksi</th>
+                <th colspan="2">Aksi</th>
             </tr>
         </thead>    
         <tbody>
@@ -264,20 +264,22 @@ error_reporting(0);
             <!-- menampilkan data dengan menggunakan array  -->
                 <td width="5%"><?php echo $no++ ?></td>
                 <td width="5%"><?php echo $data['no_ka']; ?></td>
-                <td width="25%"><?php echo $data['nama_ka']; ?></td>
+                <td width="30%"><?php echo $data['nama_ka']; ?></td>
                 <td width="10%"><?php echo $data['relasi']; ?></td>
                 <td width="5%"><?php echo $data['jumlah']; ?></td>
                 <td width="10%"><?php echo $data['purwokerto_datang']; ?></td>
                 <td width="10%"><?php echo $data['purwokerto_berangkat']; ?></td>
                 <td width="10%"><?php echo $data['stamformasi']; ?></td>
                 <td width="5%"><?php echo $data['keterangan']; ?></td>
-                <td width="15%">
+                <td width="5%">
 
                     <!-- menampilkan tombol hapus dan edit -->
                     <a href="modif-data\delete.php?id=<?php echo $data["id"];?>" onclick="return confirm('Yakin Hapus?')" class="tombol-hapus"  href="#">
                         <img src="aset\trash.svg" alt="">
                     </a>
-                    <br> <br>
+                </td>
+                <td width="5%">
+                    <!-- menampilkan tombol hapus dan edit -->
                     <a href="modif-data\update.php?id=<?php echo $data['id']?>" class="tombol-link" > 
                     <img src="aset/pencil-square.svg" alt="">
                     </a>
