@@ -19,10 +19,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="view.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Layout Peron</title>
 </head>
-<body>
+<body class='view'>
     <div id="container"></div>
         <!-- menampilkan navbar -->
         <nav>
@@ -55,7 +55,7 @@
                 ?>
             <?php
             //set waktu
-            date_default_timezone_set("Asia/jakarta"); 
+            date_default_timezone_set("Asia/Jakarta"); 
             $hariBahasaInggris = date('l');
             $hariBahasaIndonesia = hariIndo($hariBahasaInggris);
             echo "<span class='hari'>{$hariBahasaIndonesia}</span>";
@@ -66,6 +66,8 @@
             <span id="jam" class="jam" style='padding-right: 20px;'></span>
             <!-- menampilkan waktu secara live time -->
             <script type="text/javascript">
+                const str = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jayapura' });
+                console.log(str);
                 window.onload = function() { jam(); }
             
                 function jam() {
@@ -89,7 +91,7 @@
             </div>
         </nav>
         <!-- menampilkan tabel peron -->
-        <table align='center' width="99%" cellspacing="4" cellpadding="0">
+        <table class='table-peron' align='center' width="99%" cellspacing="4" cellpadding="0">
             <tr>
                 <th>JALUR<br/> <i>TRACK</i></th>
                 <th>NAMA KA <br/> <i>TRAIN NAME</i></th>

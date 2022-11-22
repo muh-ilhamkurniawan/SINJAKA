@@ -9,10 +9,10 @@ error_reporting(0);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="operator.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Layout Operator</title>
 </head>
-<body>
+<body class="operator">
     <div id="container"></div>
     <!-- menampilkan navbar -->
     <nav>
@@ -46,7 +46,7 @@ error_reporting(0);
         
         <?php
         //set waktu
-        date_default_timezone_set("Asia/jakarta"); 
+        date_default_timezone_set("Asia/Jakarta"); 
         $hariBahasaInggris = date('l');
         $hariBahasaIndonesia = hariIndo($hariBahasaInggris);
         echo "<span class='jam'>{$hariBahasaIndonesia}</span>";
