@@ -71,13 +71,11 @@
                 window.onload = function() { jam(); }
             
                 function jam() {
-                    var e = document.getElementById('jam'),
-                    d = new Date(), h, m, s;
-                    h = d.getHours();
-                    m = set(d.getMinutes());
-                    s = set(d.getSeconds());
-            
-                    e.innerHTML = h +':'+ m +':'+ s;
+                    var e = document.getElementById('jam');
+                    var date = new Date();
+                    var n = date.toLocaleTimeString('id', { timeZone: 'Asia/Jakarta' });
+        
+                    e.innerHTML = n;
             
                     setTimeout('jam()', 1000);
                 }
