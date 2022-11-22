@@ -76,52 +76,52 @@ if($row['no_ka'] != ""){
 
                 <div class="form-group">
                   <label>No.Kereta</label>
-                  <input value='<?php echo $row['no_ka']; ?>' type="text" name="nomorka" class="form-control">
+                  <input value='<?php echo $row['no_ka']; ?>' type="text" name="nomorka" class="form-control" style="text-transform: uppercase;">
                 </div>
 
                 <div class="form-group">
                   <label>Nama Kereta</label>
-                  <input value='<?php echo $row['nama_ka']; ?>' type="text" name="nama_ka" class="form-control">
+                  <input value='<?php echo $row['nama_ka']; ?>' type="text" name="nama_ka" class="form-control" style="text-transform: uppercase;">
                 </div>
 
                 <div class="form-group">
                   <label>Relasi</label>
-                  <input value='<?php echo $row['relasi']; ?>' type="text" name="relasi" class="form-control">
+                  <input value='<?php echo $row['relasi']; ?>' type="text" name="relasi" class="form-control" style="text-transform: uppercase;">
                 </div>
 
                 <div class="form-group">
                   <label>Jadwal Berangkat</label>
-                  <input value='<?php echo $row['jadwal_berangkat']; ?>' type="text" name="jadwal_brgkt" class="form-control">
+                  <input value='<?php echo $row['jadwal_berangkat']; ?>' type="text" name="jadwal_brgkt" class="form-control" style="text-transform: uppercase;">
                 </div>
 
                 <div class="form-group">
                   <label>Jadwal Datang</label>
-                  <input value='<?php echo $row['jadwal_datang']; ?>' type="text" name="jadwal_dtg" class="form-control">
+                  <input value='<?php echo $row['jadwal_datang']; ?>' type="text" name="jadwal_dtg" class="form-control" style="text-transform: uppercase;">
                 </div>
 
                 <div class="form-group">
                   <label>Jumlah</label>
-                  <input value='<?php echo $row['jumlah']; ?>' type="number" name="jumlah" class="form-control">
+                  <input value='<?php echo $row['jumlah']; ?>' type="number" name="jumlah" class="form-control" style="text-transform: uppercase;">
                 </div>
 
                 <div class="form-group">
                   <label>Purwokerto Datang</label>
-                  <input value='<?php echo $row['purwokerto_datang']; ?>' type="text" name="pwtdtg" class="form-control">
+                  <input value='<?php echo $row['purwokerto_datang']; ?>' type="text" name="pwtdtg" class="form-control" style="text-transform: uppercase;">
                 </div>
 
                 <div class="form-group">
                   <label>purwokerto Berangkat</label>
-                  <input value='<?php echo $row['purwokerto_berangkat']; ?>' type="text" name="pwtbrk" class="form-control">
+                  <input value='<?php echo $row['purwokerto_berangkat']; ?>' type="text" name="pwtbrk" class="form-control" style="text-transform: uppercase;">
                 </div>
 
                 <div class="form-group">
                   <label>Stamformasi</label>
-                  <input value='<?php echo $row['stamformasi']; ?>' type="text" name="stamformasi" class="form-control">
+                  <input value='<?php echo $row['stamformasi']; ?>' type="text" name="stamformasi" class="form-control" style="text-transform: uppercase;">
                 </div>
 
                 <div class="form-group">
                   <label>Keterangan</label>
-                  <input value='<?php echo $row['keterangan']; ?>' type="text" name="keterangan" class="form-control">
+                  <input value='<?php echo $row['keterangan']; ?>' type="text" name="keterangan" class="form-control" style="text-transform: uppercase;">
                 </div>
 
                 

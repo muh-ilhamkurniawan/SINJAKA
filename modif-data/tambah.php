@@ -64,52 +64,52 @@ VALUES('','$no','$no_ka','$nama_ka','$relasi',
 
                 <div class="form-group">
                   <label>No.Kereta</label>
-                  <input type="text" name="nomorka" class="form-control">
+                  <input type="text" name="nomorka" class="form-control" style="text-transform: uppercase;">
                 </div>
 
                 <div class="form-group">
                   <label>Nama Kereta</label>
-                  <input type="text" name="nama_ka" class="form-control">
+                  <input type="text" name="nama_ka" class="form-control" style="text-transform: uppercase;">
                 </div>
 
                 <div class="form-group">
                   <label>Tujuan</label>
-                  <input type="text" name="relasi" class="form-control">
+                  <input type="text" name="relasi" class="form-control" style="text-transform: uppercase;">
                 </div>
 
                 <div class="form-group">
                   <label>Jadwal Berangkat</label>
-                  <input type="text" name="jadwal_brgkt" class="form-control">
+                  <input type="text" name="jadwal_brgkt" class="form-control" style="text-transform: uppercase;">
                 </div>
 
                 <div class="form-group">
                   <label>Jadwal Datang</label>
-                  <input type="text" name="jadwal_dtg" class="form-control">
+                  <input type="text" name="jadwal_dtg" class="form-control" style="text-transform: uppercase;">
                 </div>
 
                 <div class="form-group">
                   <label>Jumlah</label>
-                  <input type="number" name="jumlah" class="form-control">
+                  <input type="number" name="jumlah" class="form-control" style="text-transform: uppercase;">
                 </div>
 
                 <div class="form-group">
                   <label>Purwokerto Datang</label>
-                  <input type="text" name="pwtdtg" class="form-control">
+                  <input type="text" name="pwtdtg" class="form-control" style="text-transform: uppercase;">
                 </div>
 
                 <div class="form-group">
                   <label>purwokerto Berangkat</label>
-                  <input type="text" name="pwtbrk" class="form-control">
+                  <input type="text" name="pwtbrk" class="form-control" style="text-transform: uppercase;">
                 </div>
 
                 <div class="form-group">
                   <label>Stamformasi</label>
-                  <input type="text" name="stamformasi" class="form-control">
+                  <input type="text" name="stamformasi" class="form-control" style="text-transform: uppercase;">
                 </div>
 
                 <div class="form-group">
                   <label>Keterangan</label>
-                  <input type="text" name="keterangan" class="form-control">
+                  <input type="text" name="keterangan" class="form-control" style="text-transform: uppercase;">
                 </div>
 
                 
