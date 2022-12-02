@@ -89,6 +89,7 @@
             </div>
         </nav>
         <!-- menampilkan tabel peron -->
+        <div class="konten">
         <table class='table-peron' align='center' width="99%" cellspacing="4" cellpadding="0">
             <tr>
                 <th>JALUR<br/> <i>TRACK</i></th>
@@ -104,9 +105,9 @@
             while($row = mysqli_fetch_array($query)){
             echo "
             <tr>
-                <td width='10%'> <span class='isi'><div class='jalur'>$jalur</div> </span></td>
+                <td width='7%'> <span class='isi'><div class='jalur'>$jalur</div> </span></td>
                 <td width='54%'><span class='isi'>$row[nama_ka] - $row[no_ka]</span></td>
-                <td width='23%'><span class='isi'>$row[tujuan]</span></td>
+                <td width='26%'><span class='isi'>$row[tujuan]</span></td>
                 <td width='13%' ><span class='isi'>$row[jam_berangkat]</span></td>
                 </tr>
             ";
@@ -114,6 +115,8 @@
             }
         ?>
         </table>
+        </div>
+        
         <!-- menampilkan footer -->
         <footer>
             <p><marquee scrollamount="14" loop="1">PT KERETA API INDONESIA (PERSERO) DAOP 5 PURWOKERTO</marquee></p>

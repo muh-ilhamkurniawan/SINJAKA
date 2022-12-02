@@ -54,7 +54,7 @@ if($row['no_ka'] != ""){
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <title>Tambah Siswa</title>
+    <title>Edit Jadwal</title>
   </head>
 
   <body>
@@ -64,7 +64,7 @@ if($row['no_ka'] != ""){
         <div class="col-md-8 offset-md-2">
           <div class="card">
             <div class="card-header">
-              TAMBAH DATA KEBERANGKATAN
+              EDIT DATA KEBERANGKATAN
             </div>
             <div class="card-body">
               <form method="POST">
@@ -100,7 +100,7 @@ if($row['no_ka'] != ""){
                 </div>
 
                 <div class="form-group">
-                  <label>Jumlah</label>
+                  <label>Jalur</label>
                   <input value='<?php echo $row['jumlah']; ?>' type="number" name="jumlah" class="form-control" style="text-transform: uppercase;">
                 </div>
 
