@@ -85,7 +85,7 @@ if($row['no_ka'] != ""){
                 </div>
 
                 <div class="form-group">
-                  <label>Relasi</label>
+                  <label>Tujuan</label>
                   <input value='<?php echo $row['relasi']; ?>' type="text" name="relasi" class="form-control" style="text-transform: uppercase;">
                 </div>
 
@@ -110,7 +110,7 @@ if($row['no_ka'] != ""){
                 </div>
 
                 <div class="form-group">
-                  <label>purwokerto Berangkat</label>
+                  <label>Purwokerto Berangkat</label>
                   <input value='<?php echo $row['purwokerto_berangkat']; ?>' type="text" name="pwtbrk" class="form-control" style="text-transform: uppercase;">
                 </div>
 

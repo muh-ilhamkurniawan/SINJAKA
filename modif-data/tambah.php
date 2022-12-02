@@ -98,7 +98,7 @@ VALUES('','$no','$no_ka','$nama_ka','$relasi',
                 </div>
 
                 <div class="form-group">
-                  <label>purwokerto Berangkat</label>
+                  <label>Purwokerto Berangkat</label>
                   <input type="text" name="pwtbrk" class="form-control" style="text-transform: uppercase;">
                 </div>
 
