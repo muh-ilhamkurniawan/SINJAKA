@@ -84,6 +84,7 @@ error_reporting(0);
     <!-- menampilkan tombol menuju halaman penumpang -->
     <div class="link">
                 <a href="view.php" class="tombol-link">Halaman Peron</a> 
+                <a href="..\index.php" class="tombol-link">Kembali</a> 
     </div>
 
     <!-- menampilkan tabel pemilihan -->
