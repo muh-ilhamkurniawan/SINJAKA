@@ -100,7 +100,7 @@
         <?php
             //menampilkan KA sesuai jalur
             $jalur = 1;
-            $sql = "select * from hasilka order by jalur asc";
+            $sql = "select * from hasilka_purwokerto order by jalur asc";
             $query = mysqli_query($conn,$sql);
             while($row = mysqli_fetch_array($query)){
             echo "

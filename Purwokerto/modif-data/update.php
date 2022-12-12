@@ -20,7 +20,7 @@ if(isset($_POST['ubah'])){
   $stamformasi = htmlspecialchars($_POST["stamformasi"]);
   $keterangan = htmlspecialchars($_POST["keterangan"]);
 
-$update = "UPDATE departure SET
+$update = "UPDATE departure_purwokerto SET
            nomor = '$no',
            no_ka = '$no_ka',
            nama_ka = '$nama_ka',
@@ -45,7 +45,7 @@ $update = "UPDATE departure SET
     }
 }
 
-$row = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM departure WHERE id = '$id'"));
+$row = mysqli_fetch_array(mysqli_query($koneksi, "SELECT * FROM departure_purwokerto WHERE id = '$id'"));
 if($row['no_ka'] != ""){
 ?>
 <!doctype html>

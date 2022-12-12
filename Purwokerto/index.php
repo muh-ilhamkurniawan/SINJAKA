@@ -171,7 +171,7 @@ error_reporting(0);
         $koneksi = mysqli_connect("localhost","root","","kai_db");
 
         if(isset($_POST['hapussemua'])){
-                $hapus = "DELETE FROM departure";
+                $hapus = "DELETE FROM departure_purwokerto";
                 $query = mysqli_query($koneksi, $hapus);
                 if($query){
                     ?>
@@ -185,12 +185,12 @@ error_reporting(0);
         //fungsi cari
         if(isset($_GET["cari"])){
             $daftardata = $_GET["cari"];
-            $search = "SELECT * FROM departure 
+            $search = "SELECT * FROM departure_purwokerto 
                 WHERE  no_ka LIKE '%".$daftardata."%' OR
                         nama_ka LIKE '%".$daftardata."%' OR 
                         relasi LIKE '%$".$daftardata."%'";				
                 }else{
-                    $search = "SELECT * FROM departure ORDER BY purwokerto_berangkat";		
+                    $search = "SELECT * FROM departure_purwokerto ORDER BY purwokerto_berangkat";		
         }
     ?>
     <!-- menampilkan bagian bawah -->
@@ -253,7 +253,7 @@ error_reporting(0);
         $no = 1;
                 
         //mengambil data dari tabel barang
-        $select         = mysqli_query($koneksi, "SELECT * FROM departure ORDER BY purwokerto_berangkat");
+        $select         = mysqli_query($koneksi, "SELECT * FROM departure_purwokerto ORDER BY purwokerto_berangkat");
         $searchdata = mysqli_query($koneksi, $search);
                 
         //melooping(perulangan) dengan menggunakan while

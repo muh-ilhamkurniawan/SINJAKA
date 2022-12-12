@@ -39,7 +39,7 @@ include "koneksi.php";
             
                 
                     // input data ke database (table barang)
-                    mysqli_query($koneksi,"INSERT into departure 
+                    mysqli_query($koneksi,"INSERT into departure_purwokerto 
                     VALUES('','$no','$no_ka','$nama_ka','$relasi',
                      '$jadwal_berangkat', '$jadwal_datang', '$jumlah',
                      '$purwokerto_datang', '$purwokerto_berangkat',

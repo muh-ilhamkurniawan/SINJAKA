@@ -4,7 +4,7 @@ error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
 include "koneksi.php";
 
 if(isset($_POST['hapussemua'])){
-    $hapus = "DELETE FROM departure";
+    $hapus = "DELETE FROM departure_purwokerto";
     $query = mysqli_query($koneksi, $hapus);
     if($query){
         ?>
@@ -18,12 +18,12 @@ if(isset($_POST['hapussemua'])){
 
 if(isset($_GET["cari"])){
     $daftardata = $_GET["cari"];
-    $search = "SELECT * FROM departure 
+    $search = "SELECT * FROM departure_purwokerto 
            WHERE  no_ka LIKE '%".$daftardata."%' OR
                   nama_ka LIKE '%".$daftardata."%' OR 
                   relasi LIKE '%$".$daftardata."%'";				
         }else{
-            $search = "SELECT * FROM departure ORDER BY purwokerto_berangkat";		
+            $search = "SELECT * FROM departure_purwokerto ORDER BY purwokerto_berangkat";		
         }
 ?>
 <!DOCTYPE html>
@@ -44,7 +44,7 @@ if(isset($_GET["cari"])){
             <div class="container col-lg-12">
                 <!-- membuat tulisan alert berwarna hijau dengan tulisan di tengah  -->
                 <h3 class="alert alert-success text-center" role="alert">
-                    Database Departure KAI DAOP 5
+                    Database departure_purwokerto KAI DAOP 5
                 </h3>
                 <br>
                 <form action="index.php" method="get">
@@ -100,7 +100,7 @@ if(isset($_GET["cari"])){
                                         $no = 1;
             
                                         //mengambil data dari tabel barang
-                                        $select         = mysqli_query($koneksi, "SELECT * FROM departure ORDER BY purwokerto_berangkat LIMIT 5");
+                                        $select         = mysqli_query($koneksi, "SELECT * FROM departure_purwokerto ORDER BY purwokerto_berangkat LIMIT 5");
             
                                         $searchdata = mysqli_query($koneksi, $search);
                                         //melooping(perulangan) dengan menggunakan while

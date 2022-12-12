@@ -19,7 +19,7 @@ if(isset($_POST['tambah'])){
   $stamformasi = htmlspecialchars($_POST["stamformasi"]);
   $keterangan = htmlspecialchars($_POST["keterangan"]);
 
-$insert = "INSERT into departure 
+$insert = "INSERT into departure_purwokerto 
 VALUES('','$no','$no_ka','$nama_ka','$relasi',
  '$jadwal_berangkat', '$jadwal_datang', '$jumlah',
  '$purwokerto_datang', '$purwokerto_berangkat',

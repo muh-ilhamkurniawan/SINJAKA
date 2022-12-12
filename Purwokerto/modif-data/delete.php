@@ -5,7 +5,7 @@ include "koneksi.php";
 
 $id = $_GET["id"];
 if($id != ""){
-    $hapus = "DELETE FROM departure WHERE id = '$id'";
+    $hapus = "DELETE FROM departure_purwokerto WHERE id = '$id'";
     $query = mysqli_query($koneksi, $hapus);
     if($query){?>
         <script>
