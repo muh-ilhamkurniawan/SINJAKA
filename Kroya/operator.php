@@ -23,7 +23,7 @@ error_reporting(0);
             </div>
             <!-- menampilkan nama stasiun -->
             <div class="stasiun">
-                OPERATOR STASIUN KROYA
+                OPERATOR STASIUN <br> KROYA
             </div>
         </div>
         <!-- menampilkan date time -->

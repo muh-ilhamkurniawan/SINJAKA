@@ -23,7 +23,7 @@ error_reporting(0);
             </div>
             <!-- menampilkan nama stasiun -->
             <div class="stasiun">
-                OPERATOR STASIUN KUTOARJO
+                OPERATOR STASIUN <br> KUTOARJO
             </div>
         </div>
         <!-- menampilkan date time -->
