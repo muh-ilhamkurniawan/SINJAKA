@@ -164,6 +164,14 @@ main {
   padding: 4px 8px;
   text-decoration: none;
 }
+.operator .tombol-logout {
+  background: red;
+  color: white;
+  border: 0px;
+  border-radius: 5px;
+  padding: 4px 8px;
+  text-decoration: none;
+}
 .operator .table-jadwal {
   text-transform: uppercase;
   margin: 0 auto;

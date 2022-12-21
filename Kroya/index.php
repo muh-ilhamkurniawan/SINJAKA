@@ -84,7 +84,7 @@ error_reporting(0);
     <!-- menampilkan tombol menuju halaman penumpang -->
     <div class="link">
                 <a href="view.php" class="tombol-link">Halaman Peron</a> 
-                <a href="..\index.php" class="tombol-link">Kembali</a> 
+                <a href="..\logout.php" class="tombol-logout">Keluar</a> 
     </div>
 
     <!-- menampilkan tabel pemilihan -->
@@ -160,6 +160,16 @@ error_reporting(0);
                     <td><?php echo $row5['jam_berangkat']; ?></td>
                     <td><input type="submit" name="delete5" onclick="return confirm('Yakin Hapus?')" value="Hapus" class="tombol-hapus"></td>
                 </tr>   
+                <tr>
+                    <td>6</td>
+                    <td><input type="text" name="jalurka6" class="upper"></td>
+                    <td><input type="submit" name="update6" value="Simpan" class="tombol-link"></td>
+                    <td><?php echo $row6['no_ka']; ?></td>
+                    <td><?php echo $row6['nama_ka']; ?></td>
+                    <td><?php echo $row6['tujuan']; ?></td>
+                    <td><?php echo $row6['jam_berangkat']; ?></td>
+                    <td><input type="submit" name="delete6" onclick="return confirm('Yakin Hapus?')" value="Hapus" class="tombol-hapus"></td>
+                </tr>   
             </table>          
         </form>
     </div>
@@ -177,7 +187,7 @@ error_reporting(0);
                     ?>
                     <script>
                         alert("Semua Data Berhasil di Hapus");
-                        document.location.href = "operator.php";
+                        document.location.href = "index.php";
                     </script>
                     <?php
                 }
@@ -197,7 +207,7 @@ error_reporting(0);
     <div>
         <!-- menampilan box pencarian -->
         <div class="search">
-            <form action="operator.php" method="get">
+            <form action="index.php" method="get">
                     <input type="text" name="cari" id="search" for="search" width="5%" size="40" class="upper" autofocus>
                     <button class="tombol-link" type="submit" name="caridata" autocomplete="off" id="search"> Search</button>
             </form>

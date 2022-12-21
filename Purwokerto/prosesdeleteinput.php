@@ -6,7 +6,7 @@
             ?>
             <script>
                 alert('Data Jalur 1 Berhasil Dihapus');
-                document.location='operator.php';
+                document.location='index.php';
             </script>
             <?php
         }
@@ -18,7 +18,7 @@
             ?>
             <script>
                 alert('Data Jalur 2 Berhasil Dihapus');
-                document.location='operator.php';
+                document.location='index.php';
             </script>
             <?php
         }
@@ -30,7 +30,7 @@
             ?>
             <script>
                 alert('Data Jalur 3 Berhasil Dihapus');
-                document.location='operator.php';
+                document.location='index.php';
             </script>
             <?php
         }
@@ -42,7 +42,7 @@
             ?>
             <script>
                 alert('Data Jalur 4 Berhasil Dihapus');
-                document.location='operator.php';
+                document.location='index.php';
             </script>
             <?php
         }
@@ -54,7 +54,7 @@
             ?>
             <script>
                 alert('Data Jalur 5 Berhasil Dihapus');
-                document.location='operator.php';
+                document.location='index.php';
             </script>
             <?php
         }

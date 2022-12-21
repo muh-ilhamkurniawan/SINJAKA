@@ -10,7 +10,7 @@ if($id != ""){
     if($query){?>
         <script>
             alert("Data Berhasil di Hapus");
-            document.location.href = "operator.php";
+            document.location.href = "index.php";
         </script>
     <?php
     }

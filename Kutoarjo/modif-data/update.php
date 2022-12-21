@@ -3,7 +3,7 @@ error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
 
 include "koneksi.php";
 if(isset($_POST['kembali'])){
-    header("location:../operator.php");   
+    header("location:../index.php");   
 }
 
 $id = $_GET["id"];
@@ -39,7 +39,7 @@ $update = "UPDATE departure_kutoarjo SET
         ?>
         <script>
             alert("Data Berhasil di ubah");
-            document.location = "../operator.php";
+            document.location = "../index.php";
         </script>
     <?php
     }

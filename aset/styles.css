@@ -32,7 +32,7 @@ body {
   }
 }
 
-.content {
+.content1 {
   overflow: hidden;
   background-color: darkblue;
   padding: 30px;
@@ -42,36 +42,69 @@ body {
   left: 0;
   right: 0;
   top: 50%;
-  transform: translateY(-44%);
+  transform: translateY(-48%);
 }
-
-.content h1 {
+.content1 h2 {
+  font-size: 28px;
   color: white;
+  text-shadow: 2px 2px 4px black;
 }
 
-.content h2 {
+.content2 {
+  overflow: hidden;
+  background-color: darkblue;
+  padding: 10px;
+  font-family: Trebuchet MS;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-40%);
+}
+.content2 h1 {
+  font-size: 32px;
   color: white;
-  padding-top: 10px;
+  text-shadow: 2px 2px 4px black;
 }
 
-.stasiun {
+.content3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
+  overflow: hidden;
+  background-color: darkblue;
+  padding: 10px;
+  font-family: Trebuchet MS;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-40%);
 }
 
-.stasiun h3,
+.admin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.admin h3,
 p {
-  margin-top: 0px;
-  font-size: 22px;
+  margin-top: 20px;
+  font-size: 20px;
   font-weight: bold;
-  padding: 10px;
+  padding: 5px;
+}
+.admin img {
+  padding-top: 10px;
 }
 
 #box1 {
   color: black;
-  border-radius: 15px;
+  border-radius: 25px;
   background: #fa7d16;
   padding: 10px;
   width: 145px;
@@ -82,12 +115,17 @@ p {
 }
 #box1:hover {
   color: whitesmoke;
-  box-shadow: 2px 4px 13px 3px darkgray;
+  border-radius: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
-
+.kembali {
+  text-align: left;
+  padding: 10px;
+}
 #box2 {
   color: black;
-  border-radius: 15px;
+  border-radius: 25px;
   background: #fa7d16;
   padding: 10px;
   width: 145px;
@@ -98,12 +136,14 @@ p {
 }
 #box2:hover {
   color: whitesmoke;
-  box-shadow: 2px 4px 13px 3px darkgray;
+  border-radius: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #box3 {
   color: black;
-  border-radius: 15px;
+  border-radius: 25px;
   background: #fa7d16;
   padding: 10px;
   width: 145px;
@@ -113,5 +153,258 @@ p {
 }
 #box3:hover {
   color: whitesmoke;
-  box-shadow: 2px 4px 13px 3px darkgray;
+  border-radius: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.formlogin {
+  text-align: left;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+}
+.formlogin input[type="text"],
+input[type="password"] {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  width: 325px;
+  padding: 7px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+.formlogin input[type="text"]:focus,
+input[type="password"]:focus {
+  border: 2px solid deepskyblue;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.tombollogin {
+  color: black;
+  width: 100px;
+  padding: 7px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 12px;
+  box-sizing: border-box;
+  background-color: deepskyblue;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.tombollogin:hover {
+  border-radius: 6px;
+  background-color: lightskyblue;
+}
+.tombollogout {
+  text-decoration: none;
+  color: black;
+  padding: 7px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 12px;
+  box-sizing: border-box;
+  background-color: orangered;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.tombollogout:hover {
+  border-radius: 6px;
+  background-color: lightcoral;
+}
+
+#boxlogin {
+  color: black;
+  border-radius: 15px;
+  background: #fa7d16;
+  padding: 10px;
+  width: 350px;
+  height: 350px;
+  float: left;
+  box-shadow: 2px 4px 13px 0px black;
+}
+
+.listakun {
+  padding-top: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#boxlistakun {
+  color: black;
+  background: #fa7d16;
+  margin-top: 20px;
+  padding: 0;
+  width: 650px;
+  height: 450px;
+  border: 4px solid black;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+#boxdalam {
+  color: black;
+  background: #ffe4e4;
+  margin-top: 10px;
+  padding: 0;
+  width: 638px;
+  height: 380px;
+  font-size: 14px;
+  border: 2px solid darkgray;
+}
+#boxdalam table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#boxdalam tr {
+  border-bottom: 2px solid darkgray;
+  background: #ebd5d5;
+}
+#boxdalam td {
+  padding: 5px;
+}
+
+.buttonedit {
+  text-decoration: none;
+  color: black;
+  padding: 2px 8px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: deepskyblue;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.buttonedit:hover {
+  border-radius: 3px;
+  background-color: lightskyblue;
+}
+
+.buttonhapus {
+  text-decoration: none;
+  color: black;
+  padding: 2px 8px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: orangered;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.buttonhapus:hover {
+  border-radius: 3px;
+  background-color: lightcoral;
+}
+
+#boxregis {
+  color: black;
+  border-radius: 15px;
+  background: #fa7d16;
+  padding: 10px;
+  width: 350px;
+  float: left;
+  box-shadow: 2px 4px 13px 0px black;
+}
+
+.regis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.formregis {
+  text-align: left;
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+}
+.formregis input[type="text"],
+input[type="password"],
+select {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  width: 325px;
+  padding: 7px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+.formregis input[type="text"]:focus,
+input[type="password"]:focus {
+  border: 2px solid deepskyblue;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+#boxupdate {
+  color: black;
+  border-radius: 15px;
+  background: #fa7d16;
+  padding: 10px;
+  width: 350px;
+  height: 400px;
+  float: left;
+  box-shadow: 2px 4px 13px 0px black;
+}
+
+.update {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.formupdate {
+  text-align: left;
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+}
+.formupdate input[type="text"],
+input[type="password"],
+select {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  width: 325px;
+  padding: 7px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+.formupdate input[type="text"]:focus,
+input[type="password"]:focus {
+  border: 2px solid deepskyblue;
+  border-radius: 2px;
+  box-sizing: border-box;
 }

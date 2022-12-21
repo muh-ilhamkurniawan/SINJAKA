@@ -51,5 +51,5 @@ include "koneksi.php";
             unlink($_FILES['fileexcel']['name']);
             
             // alihkan halaman ke index.php
-            header("location:../operator.php");
+            header("location:../index.php");
             ?>
