@@ -1,4 +1,10 @@
 <?php
+if(!isset($_SERVER['HTTP_REFERER'])){
+    // redirect them to your desired location
+    header('location: index.php');
+    exit;
+}
+
 ini_set("display_errors",0);
 error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
 error_reporting(0);
@@ -48,7 +54,10 @@ if($row['nama'] != ""){
 	<div class="content2">
 		<div class="update">
 			<div id="boxupdate">
-				<div class="listakun">Edit Akun</div>
+				<a href="./listakun.php" class="kembali">Kembali</a>
+				<div class="listakun"> 
+					Edit Akun
+				</div>
 				<form name="updateform" action="" method="post">
 					<div class="formupdate">
 					<table>
@@ -56,13 +65,13 @@ if($row['nama'] != ""){
 							<td>NIP</td>
 						</tr>
 						<tr>
-							<td><input  value='<?php echo $row['nip']; ?>' type="text" name="nip"></td>
+							<td><input  value='<?php echo $row['nip']; ?>' type="text" name="nip" maxlength="18"></td>
 						</tr>
 						<tr>
 							<td>Nama</td>
 						</tr>
 						<tr>
-							<td><input  value='<?php echo $row['nama']; ?>' type="text" name="nama"></td>
+							<td><input  value='<?php echo $row['nama']; ?>' type="text" name="nama" maxlength="30"></td>
 						</tr>
 						<tr>
 							<td>Peran</td>

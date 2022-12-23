@@ -1,4 +1,10 @@
 <?php
+if(!isset($_SERVER['HTTP_REFERER'])){
+    // redirect them to your desired location
+    header('location: index.php');
+    exit;
+}
+
 ini_set("display_errors",0);
 error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
 error_reporting(0);
@@ -47,8 +53,10 @@ if(isset($_POST['regis'])){
 	<div class="content2">
 		<div class="regis">
 			<div id="boxregis">
-				<div class="listakun">Akun Baru</div>
-				<div class="kembali"><a href="./home.php" class="tombollogout">Kembali</a> </div>
+				<a href="./home.php" class="kembali">Kembali</a>
+				<div class="listakun">
+					Akun Baru
+				</div>
 				<form name="regisform" action="" method="post">
 					<div class="formregis">
 					<table>
@@ -56,19 +64,19 @@ if(isset($_POST['regis'])){
 							<td>NIP</td>
 						</tr>
 						<tr>
-							<td><input type="text" name="nip"></td>
+							<td><input type="text" name="nip" maxlength="18"></td>
 						</tr>
 						<tr>
 							<td>Nama</td>
 						</tr>
 						<tr>
-							<td><input type="text" name="nama"></td>
+							<td><input type="text" name="nama" maxlength="30"></td>
 						</tr>
 						<tr>
 							<td>Password</td>
 						</tr>
 						<tr>
-							<td><input type="Password" name="pass"></td>
+							<td><input type="Password" name="pass" maxlength="30"></td>
 						</tr>
 						<tr>
 							<td>Peran</td>

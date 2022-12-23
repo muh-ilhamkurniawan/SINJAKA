@@ -1,4 +1,10 @@
 <?php
+if(!isset($_SERVER['HTTP_REFERER'])){
+    // redirect them to your desired location
+    header('location: index.php');
+    exit;
+}
+
 include "koneksi.php";
 ini_set("display_errors",0);
 error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
@@ -24,8 +30,10 @@ error_reporting(0);
 	</div>
 	<div class="content3">
 			<div id="boxlistakun">
-				<div class="listakun">List Akun</div>
-				<div class="kembali"><a href="./home.php" class="tombollogout">Kembali</a> </div>
+				<a href="./home.php" class="kembali">Kembali</a>
+				<div class="listakun"> 
+					List Akun
+				</div>
 				<div id="boxdalam">
 					<table>
 						<tr>

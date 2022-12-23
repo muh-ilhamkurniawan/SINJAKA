@@ -1,4 +1,10 @@
 <?php
+if(!isset($_SERVER['HTTP_REFERER'])){
+    // redirect them to your desired location
+    header('location: error.php');
+    exit;
+}
+
     if(isset($_POST['delete1'])){
         $hapus = "update hasilka_purwokerto set no_ka='--', nama_ka='--', tujuan ='--', jam_berangkat='--' where jalur = 1";
         $query = mysqli_query($conn, $hapus);

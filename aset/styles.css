@@ -89,6 +89,7 @@ body {
   justify-content: center;
   align-items: center;
   padding-top: 60px;
+  margin-bottom: 60px;
 }
 
 .admin h3,
@@ -119,10 +120,27 @@ p {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
 .kembali {
-  text-align: left;
-  padding: 10px;
+  float: left ;
+  text-decoration: none;
+  color: black;
+  margin: 5px;
+  padding: 7px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 12px;
+  box-sizing: border-box;
+  background-color: orangered;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
+.kembali:hover {
+  border-radius: 6px;
+  background-color: lightcoral;
+}
+
 #box2 {
   color: black;
   border-radius: 25px;
@@ -210,11 +228,12 @@ input[type="password"]:focus {
   border-radius: 6px;
   background-color: lightskyblue;
 }
+
 .tombollogout {
   text-decoration: none;
   color: black;
-  padding: 7px;
-  font-size: 16px;
+  padding: 7px 20px;
+  font-size: 18px;
   font-weight: bold;
   border: 2px solid black;
   border-radius: 12px;
@@ -244,6 +263,7 @@ input[type="password"]:focus {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 10px;
+  padding-right: 80px;
 }
 
 #boxlistakun {

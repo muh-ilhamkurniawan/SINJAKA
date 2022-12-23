@@ -16,7 +16,7 @@ if($id != ""){
     if($query){?>
         <script>
             alert("Data Berhasil di Hapus");
-            document.location.href = "listakun.php";
+            document.location.href = "activity.php";
         </script>
     <?php
     }

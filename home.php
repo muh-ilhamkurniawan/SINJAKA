@@ -1,4 +1,10 @@
 <?php
+if(!isset($_SERVER['HTTP_REFERER'])){
+    // redirect them to your desired location
+    header('location: index.php');
+    exit;
+}
+
 ini_set("display_errors",0);
 error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
 error_reporting(0);
@@ -23,7 +29,6 @@ error_reporting(0);
 	</div>
 	<div class="content1">
 		<h2>Selamat Datang, Admin!</h2>
-		<a href="./logout.php" class="tombollogout">Keluar</a> 
 		<div class="admin">
 		
 			<a href="./listakun.php">
@@ -45,6 +50,7 @@ error_reporting(0);
 				</div>
 			</a>
 		</div>
+		<a href="./logout.php" class="tombollogout">Keluar</a> 
 	</div>
 </body>
 </html>

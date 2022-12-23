@@ -1,4 +1,10 @@
 <?php 
+if(!isset($_SERVER['HTTP_REFERER'])){
+    // redirect them to your desired location
+    header('location: index.php');
+    exit;
+}
+
 include "koneksi.php";
             // menghubungkan dengan library excel reader
             include "excel_reader.php";

@@ -1,4 +1,10 @@
 <?php
+if(!isset($_SERVER['HTTP_REFERER'])){
+    // redirect them to your desired location
+    header('location: error.php');
+    exit;
+}
+
 error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
 
 $koneksi = mysqli_connect("localhost","root","","kai_db");

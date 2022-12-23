@@ -2,15 +2,11 @@
 ini_set("display_errors",0);
 error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
 error_reporting(0);
-?>
-<?php
-
- 
-error_reporting(0);
  
 session_start();
-include 'koneksi.php';
+
 if (isset($_POST['login'])) {
+	include_once 'koneksi.php';
     $nama = $_POST['nama'];
     $password = $_POST['password'];
  
@@ -21,39 +17,82 @@ if (isset($_POST['login'])) {
     if ($hasil['nama']==$nama && $hasil['password']==$password) {
 		$_SESSION['nama'] = $hasil['nama'];
 		$_SESSION['peran'] = $hasil['peran'];
+		$nama_hasil = $hasil['nama'];
+		$activity = mysqli_fetch_array(mysqli_query($conn,"SELECT nama_user FROM activity_log WHERE nama_user='$nama';"));
+		$activity_no = mysqli_fetch_array(mysqli_query($conn,"SELECT no FROM activity_log ORDER BY no DESC LIMIT 1;"));
 
 			if ($hasil['peran']=="Admin") {
+				$user = mysqli_fetch_array(mysqli_query($conn,"SELECT nama FROM user WHERE peran='Admin';"));
+				$no = $activity_no['no'];
+				$nama_activity = $activity['nama_user'];
+				$nama_user =  $user['nama'];
+				if($nama_activity == $nama){
+					$query = "UPDATE activity_log SET waktu_login = now() WHERE nama_user = '$nama_hasil'";
+				}else{
+					$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user',now(),'')";	
+				}
+			    $result = $conn->query($query);
 				?>
 				<script>
-				alert('Selamat Datang Admin');
+				alert('Selamat Datang Admin');;
 				document.location="home.php";
 				</script>
 				<?php
+
 			} elseif ($hasil['peran']=="OP Purwokerto") {
-								?>
+				$user = mysqli_fetch_array(mysqli_query($conn,"SELECT * FROM user WHERE peran='OP Purwokerto';"));
+				$no = $activity_no['no'];
+				$nama_activity = $activity['nama_user'];
+				$nama_user =  $user['nama'];
+				if($nama_activity == $nama){
+					$query = "UPDATE activity_log SET waktu_login = now() WHERE nama_user = '$nama_hasil'";
+				}else{
+					$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user',now(),'')";	
+				}
+			    $result = $conn->query($query);
+				?>
 				<script>
-				alert('Selamat Datang Admin');
+				alert('Selamat Datang Operator Stasiun Purwokerto');
 				document.location="Purwokerto";
 				</script>
 				<?php
+
 			} elseif ($hasil['peran']=="OP Kutoarjo") {
+				$user = mysqli_fetch_array(mysqli_query($conn,"SELECT * FROM user WHERE peran='OP Kutoarjo';"));
+				$no = $activity_no['no'];
+				$nama_activity = $activity['nama_user'];
+				$nama_user =  $user['nama'];
+				if($nama_activity == $nama){
+					$query = "UPDATE activity_log SET waktu_login = now() WHERE nama_user = '$nama_hasil'";
+				}else{
+					$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user',now(),'')";	
+				}
+			    $result = $conn->query($query);
 				?>
 				<script>
-				alert('Selamat Datang Admin');
+				alert('Selamat Datang Operator Stasiun Kutoarjo');
 				document.location="Kutoarjo";
 				</script>
 				<?php
+
+			} elseif ($hasil['peran']=="OP Kroya") {
+				$user = mysqli_fetch_array(mysqli_query($conn,"SELECT * FROM user WHERE peran='OP Kroya';"));
+				$no = $activity_no['no'];
+				$nama_activity = $activity['nama_user'];
+				$nama_user =  $user['nama'];
+				if($nama_activity == $nama){
+					$query = "UPDATE activity_log SET waktu_login = now() WHERE nama_user = '$nama_hasil'";
+				}else{
+					$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user',now(),'')";	
 				}
-				elseif ($hasil['peran']=="OP Kroya") {
-					?>
+			    $result = $conn->query($query);
+				?>
 				<script>
-				alert('Selamat Datang Admin');
+				alert('Selamat Datang Operator Stasiun Kroya');
 				document.location="Kroya";
 				</script>
-				<?php
-				}
-
-
+			<?php
+			}
         ?>
 
 		<?php
@@ -95,13 +134,13 @@ if (isset($_POST['login'])) {
 							<td>Nama</td>
 						</tr>
 						<tr>
-							<td><input type="text" name="nama"></td>
+							<td><input type="text" name="nama" maxlength="30"></td>
 						</tr>
 						<tr>
 							<td>Password</td>
 						</tr>
 						<tr>
-							<td><input type="Password" name="password"></td>
+							<td><input type="Password" name="password" maxlength="30"></td>
 						</tr>
 					</table>
 					</div>
