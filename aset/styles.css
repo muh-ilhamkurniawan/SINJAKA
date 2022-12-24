@@ -346,7 +346,21 @@ input[type="password"]:focus {
   float: left;
   box-shadow: 2px 4px 13px 0px black;
 }
-
+.search {
+  /* display: flex; */
+  justify-content: left;
+  align-items: left;
+  overflow: hidden;
+  /* background-color: darkblue; */
+  /* padding: 10px; */
+  /* font-family: Trebuchet MS; */
+  text-align: left;
+  /* position: absolute; */
+  /* left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-40%); */
+}
 .regis {
   display: flex;
   justify-content: center;
