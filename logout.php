@@ -21,11 +21,12 @@ if ($_SESSION["peran"]=="Admin") {
 	$no = $activity_no['no'];
 	$nama_activity = $activity['nama_user'];
 	$nama_user =  $user['nama'];
-	if($nama_activity == $nama){
-		$query = "UPDATE activity_log SET waktu_logout = now() WHERE nama_user = '$nama_hasil'";
-	}else{
-		$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user','',now())";	
-	}
+	// if($nama_activity == $nama){
+	// 	$query = "UPDATE activity_log SET waktu_logout = now() WHERE nama_user = '$nama_hasil'";
+	// }else{
+	// 	$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user','',now())";	
+	// }
+	$query = "UPDATE activity_log SET waktu_logout = now() WHERE no = '$no'";
 	$result = $conn->query($query);
 
 } elseif ($_SESSION["peran"]=="OP Purwokerto") {
@@ -33,11 +34,12 @@ if ($_SESSION["peran"]=="Admin") {
 	$no = $activity_no['no'];
 	$nama_activity = $activity['nama_user'];
 	$nama_user =  $user['nama'];
-	if($nama_activity == $nama){
-		$query = "UPDATE activity_log SET waktu_logout = now() WHERE nama_user = '$nama_hasil'";
-	}else{
-		$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user','',now())";	
-	}
+	// if($nama_activity == $nama){
+	// 	$query = "UPDATE activity_log SET waktu_logout = now() WHERE nama_user = '$nama_hasil'";
+	// }else{
+	// 	$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user','',now())";	
+	// }
+	$query = "UPDATE activity_log SET waktu_logout = now() WHERE no = '$no'";	
 	$result = $conn->query($query);
 
 } elseif ($_SESSION["peran"]=="OP Kutoarjo") {
@@ -45,11 +47,12 @@ if ($_SESSION["peran"]=="Admin") {
 	$no = $activity_no['no'];
 	$nama_activity = $activity['nama_user'];
 	$nama_user =  $user['nama'];
-	if($nama_activity == $nama){
-		$query = "UPDATE activity_log SET waktu_logout = now() WHERE nama_user = '$nama_hasil'";
-	}else{
-		$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user','',now())";	
-	}
+	// if($nama_activity == $nama){
+	// 	$query = "UPDATE activity_log SET waktu_logout = now() WHERE nama_user = '$nama_hasil'";
+	// }else{
+	// 	$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user','',now())";	
+	// }
+	$query = "UPDATE activity_log SET waktu_logout = now() WHERE no = '$no'";
 	$result = $conn->query($query);
 
 } elseif ($_SESSION["peran"]=="OP Kroya") {
@@ -57,11 +60,12 @@ if ($_SESSION["peran"]=="Admin") {
 	$no = $activity_no['no'];
 	$nama_activity = $activity['nama_user'];
 	$nama_user =  $user['nama'];
-	if($nama_activity == $nama){
-		$query = "UPDATE activity_log SET waktu_logout = now() WHERE nama_user = '$nama_hasil'";
-	}else{
-		$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user','',now())";	
-	}
+	// if($nama_activity == $nama){
+	// 	$query = "UPDATE activity_log SET waktu_logout = now() WHERE nama_user = '$nama_hasil'";
+	// }else{
+	// 	$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user','',now())";	
+	// }
+	$query = "UPDATE activity_log SET waktu_logout = now() WHERE no = '$no'";
 	$result = $conn->query($query);
 }
 

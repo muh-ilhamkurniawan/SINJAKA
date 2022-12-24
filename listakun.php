@@ -35,13 +35,13 @@ error_reporting(0);
 					List Akun
 				</div>
 				<div id="boxdalam">
-					<table>
+					<table class="table-logger">
 						<tr>
-							<td style="width: 5%;">No</td>
-							<td style="width: 20%;">NIP</td>
-							<td style="width: 30%;">Nama</td>
-							<td style="width: 20%;">Peran</td>
-							<td></td>
+							<td>No</td>
+							<td>NIP</td>
+							<td>Nama</td>
+							<td>Peran</td>
+							<td colspan="2">Aksi</td>
 						</tr>
 						<?php
 				            $no = 1;
@@ -50,12 +50,14 @@ error_reporting(0);
 				            while($row = mysqli_fetch_array($query)) :
 				        ?>
 				            <tr>
-				            	<td><?php echo $no++ ?></td>
-				                <td><?php echo $row[nip] ?></td>
-				                <td><?php echo $row[nama] ?></td>
-				                <td><?php echo $row[peran] ?></td>
+				            	<td width="5%"><?php echo $no++ ?></td>
+				                <td width="40%"><?php echo $row[nip] ?></td>
+				                <td width="30%"><?php echo $row[nama] ?></td>
+				                <td width="25%"><?php echo $row[peran] ?></td>
 				                <td>
 				                	<a href="update.php?id=<?php echo $row["id"];?>" class="buttonedit">Edit</a>
+				                </td>
+								<td>
 				                	<a href="delete.php?id=<?php echo $row["id"];?>" class="buttonhapus" onclick="return confirm('Yakin Hapus?')" href="#">Hapus</a>
 				                </td>
 				            </tr>

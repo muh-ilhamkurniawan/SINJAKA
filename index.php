@@ -20,35 +20,36 @@ if (isset($_POST['login'])) {
 		$nama_hasil = $hasil['nama'];
 		$activity = mysqli_fetch_array(mysqli_query($conn,"SELECT nama_user FROM activity_log WHERE nama_user='$nama';"));
 		$activity_no = mysqli_fetch_array(mysqli_query($conn,"SELECT no FROM activity_log ORDER BY no DESC LIMIT 1;"));
+		$user = mysqli_fetch_array(mysqli_query($conn,"SELECT nama FROM user WHERE nama='$nama_hasil';"));
 
 			if ($hasil['peran']=="Admin") {
-				$user = mysqli_fetch_array(mysqli_query($conn,"SELECT nama FROM user WHERE peran='Admin';"));
 				$no = $activity_no['no'];
 				$nama_activity = $activity['nama_user'];
 				$nama_user =  $user['nama'];
-				if($nama_activity == $nama){
-					$query = "UPDATE activity_log SET waktu_login = now() WHERE nama_user = '$nama_hasil'";
-				}else{
-					$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user',now(),'')";	
-				}
+				// if($nama_activity == $nama){
+				// 	$query = "UPDATE activity_log SET waktu_login = now() WHERE nama_user = '$nama_hasil'";
+				// }else{
+				// 	$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user',now(),'')";	
+				// }
+				$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user','Admin',now(),'')";	
 			    $result = $conn->query($query);
 				?>
 				<script>
-				alert('Selamat Datang Admin');;
+				alert('Selamat Datang Admin');
 				document.location="home.php";
 				</script>
 				<?php
 
 			} elseif ($hasil['peran']=="OP Purwokerto") {
-				$user = mysqli_fetch_array(mysqli_query($conn,"SELECT * FROM user WHERE peran='OP Purwokerto';"));
 				$no = $activity_no['no'];
 				$nama_activity = $activity['nama_user'];
 				$nama_user =  $user['nama'];
-				if($nama_activity == $nama){
-					$query = "UPDATE activity_log SET waktu_login = now() WHERE nama_user = '$nama_hasil'";
-				}else{
-					$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user',now(),'')";	
-				}
+				// if($nama_activity == $nama){
+				// 	$query = "UPDATE activity_log SET waktu_login = now() WHERE nama_user = '$nama_hasil'";
+				// }else{
+				// 	$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user',now(),'')";	
+				// }
+				$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user','OP Purwokerto',now(),'')";		
 			    $result = $conn->query($query);
 				?>
 				<script>
@@ -58,15 +59,15 @@ if (isset($_POST['login'])) {
 				<?php
 
 			} elseif ($hasil['peran']=="OP Kutoarjo") {
-				$user = mysqli_fetch_array(mysqli_query($conn,"SELECT * FROM user WHERE peran='OP Kutoarjo';"));
 				$no = $activity_no['no'];
 				$nama_activity = $activity['nama_user'];
 				$nama_user =  $user['nama'];
-				if($nama_activity == $nama){
-					$query = "UPDATE activity_log SET waktu_login = now() WHERE nama_user = '$nama_hasil'";
-				}else{
-					$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user',now(),'')";	
-				}
+				// if($nama_activity == $nama){
+				// 	$query = "UPDATE activity_log SET waktu_login = now() WHERE nama_user = '$nama_hasil'";
+				// }else{
+				// 	$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user',now(),'')";	
+				// }
+				$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user','OP Kutoarjo',now(),'')";		
 			    $result = $conn->query($query);
 				?>
 				<script>
@@ -80,11 +81,12 @@ if (isset($_POST['login'])) {
 				$no = $activity_no['no'];
 				$nama_activity = $activity['nama_user'];
 				$nama_user =  $user['nama'];
-				if($nama_activity == $nama){
-					$query = "UPDATE activity_log SET waktu_login = now() WHERE nama_user = '$nama_hasil'";
-				}else{
-					$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user',now(),'')";	
-				}
+				// if($nama_activity == $nama){
+				// 	$query = "UPDATE activity_log SET waktu_login = now() WHERE nama_user = '$nama_hasil'";
+				// }else{
+				// 	$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user',now(),'')";	
+				// }
+				$query = "INSERT INTO activity_log VALUES ('','$no'+1,'$nama_user','OP Kroya',now(),'')";		
 			    $result = $conn->query($query);
 				?>
 				<script>
@@ -140,7 +142,20 @@ if (isset($_POST['login'])) {
 							<td>Password</td>
 						</tr>
 						<tr>
-							<td><input type="Password" name="password" maxlength="30"></td>
+							<td><input type="Password" name="password" maxlength="30" id="inputPassword"></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" onclick="myFunction()">Tampilkan Password
+							<script>
+								function myFunction() {
+									var x = document.getElementById("inputPassword");
+									if (x.type === "password") {
+										x.type = "text";
+									} else {
+										x.type = "password";
+									}
+								}
+							</script></td>
 						</tr>
 					</table>
 					</div>

@@ -11,7 +11,7 @@ error_reporting(E_ALL ^ E_NOTICE ^ E_DEPRECATED);
 
 $id = $_GET["id"];
 if($id != ""){
-    $hapus = "DELETE FROM user WHERE id = '$id'";
+    $hapus = "DELETE FROM activity_log WHERE id = '$id'";
     $query = mysqli_query($conn, $hapus);
     if($query){?>
         <script>

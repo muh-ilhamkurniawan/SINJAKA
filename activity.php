@@ -35,25 +35,27 @@ error_reporting(0);
                     Log Aktivitas Akun
                 </div>
                 <div id="boxdalam">
-                    <table>
+                    <table class="table-logger">
                         <tr>
-                            <td style="width: 5%;">No</td>
-                            <td style="width: 30%;">Nama User</td>
-                            <td style="width: 25%;">Waktu Login</td>
-                            <td style="width: 25%;">Waktu Logout</td>
-                            <td></td>
+                            <td >No</td>
+                            <td >Nama User</td>
+                            <td >Peran</td>
+                            <td >Waktu Login</td>
+                            <td >Waktu Logout</td>
+                            <td>Aksi</td>
                         </tr>
                         <?php
                             $no = 1;
-                            $sql = "select * from activity_log order by no asc";
+                            $sql = "select * from activity_log order by no desc";
                             $query = mysqli_query($conn,$sql);
                             while($row = mysqli_fetch_array($query)) :
                         ?>
                             <tr>
-                                <td><?php echo $no++ ?></td>
-                                <td><?php echo $row[nama_user] ?></td>
-                                <td><?php echo $row[waktu_login] ?></td>
-                                <td><?php echo $row[waktu_logout] ?></td>
+                                <td width="5%"><?php echo $no++ ?></td>
+                                <td width="20%"><?php echo $row[nama_user] ?></td>
+                                <td width="25%"><?php echo $row[peran] ?></td>
+                                <td width="25%"><?php echo $row[waktu_login] ?></td>
+                                <td width="25%"><?php echo $row[waktu_logout] ?></td>
                                 <td>
                                     <a href="delete2.php?id=<?php echo $row["id"];?>" class="buttonhapus" onclick="return confirm('Yakin Hapus?')" href="#">Hapus</a>
                                 </td>
