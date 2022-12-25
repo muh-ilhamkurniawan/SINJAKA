@@ -77,7 +77,7 @@ if (isset($_POST['login'])) {
 				<?php
 
 			} elseif ($hasil['peran']=="OP Kroya") {
-				$user = mysqli_fetch_array(mysqli_query($conn,"SELECT * FROM user WHERE peran='OP Kroya';"));
+				// $user = mysqli_fetch_array(mysqli_query($conn,"SELECT * FROM user WHERE peran='OP Kroya';"));
 				$no = $activity_no['no'];
 				$nama_activity = $activity['nama_user'];
 				$nama_user =  $user['nama'];
@@ -99,7 +99,7 @@ if (isset($_POST['login'])) {
 
 		<?php
     } else {
-        echo "<script>alert('Email atau password Anda salah. Silahkan coba lagi!')</script>";
+        echo "<script>alert('Nama atau password Anda salah. Silahkan coba lagi!')</script>";
     }
 }
 

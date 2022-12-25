@@ -76,12 +76,12 @@ error_reporting(0);
                 <div id="boxdalam">
                     <table class="table-logger">
                         <tr>
-                            <td >No</td>
-                            <td >Nama User</td>
-                            <td >Peran</td>
-                            <td >Waktu Login</td>
-                            <td >Waktu Logout</td>
-                            <td>Aksi</td>
+                            <th >No</th>
+                            <th >Nama User</th>
+                            <th >Peran</th>
+                            <th >Waktu Login</th>
+                            <th >Waktu Logout</th>
+                            <th>Aksi</th>
                         </tr>
                         <?php
                             $no = 1;

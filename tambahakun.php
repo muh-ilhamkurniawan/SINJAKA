@@ -64,19 +64,19 @@ if(isset($_POST['regis'])){
 							<td>NIP</td>
 						</tr>
 						<tr>
-							<td><input type="text" name="nip" maxlength="18"></td>
+							<td><input type="text" name="nip" maxlength="18" required></td>
 						</tr>
 						<tr>
 							<td>Nama</td>
 						</tr>
 						<tr>
-							<td><input type="text" name="nama" maxlength="30"></td>
+							<td><input type="text" name="nama" maxlength="30" required></td>
 						</tr>
 						<tr>
 							<td>Password</td>
 						</tr>
 						<tr>
-							<td><input type="Password" name="pass" maxlength="30"></td>
+							<td><input type="Password" name="pass" maxlength="30" required></td>
 						</tr>
 						<tr>
 							<td>Peran</td>

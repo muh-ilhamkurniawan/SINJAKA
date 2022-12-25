@@ -37,11 +37,11 @@ error_reporting(0);
 				<div id="boxdalam">
 					<table class="table-logger">
 						<tr>
-							<td>No</td>
-							<td>NIP</td>
-							<td>Nama</td>
-							<td>Peran</td>
-							<td colspan="2">Aksi</td>
+							<th>No</th>
+							<th>NIP</th>
+							<th>Nama</th>
+							<th>Peran</th>
+							<th colspan="2">Aksi</th>
 						</tr>
 						<?php
 				            $no = 1;

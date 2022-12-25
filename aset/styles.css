@@ -297,14 +297,15 @@ input[type="password"]:focus {
   border-bottom: 2px solid darkgray;
   background: #ebd5d5;
 }
-#boxdalam td {
-  padding: 5px;
+#boxdalam td,
+th {
+  padding: 10px;
 }
 
 .buttonedit {
   text-decoration: none;
   color: black;
-  padding: 2px 8px;
+  padding: 6px 5px;
   font-size: 14px;
   font-weight: bold;
   border: 2px solid black;
@@ -322,7 +323,7 @@ input[type="password"]:focus {
 .buttonhapus {
   text-decoration: none;
   color: black;
-  padding: 2px 8px;
+  padding: 5px;
   font-size: 14px;
   font-weight: bold;
   border: 2px solid black;

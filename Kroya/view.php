@@ -112,8 +112,8 @@ if(!isset($_SERVER['HTTP_REFERER'])){
             echo "
             <tr>
                 <td width='6%'> <span class='isi'><div class='jalur'>$jalur</div> </span></td>
-                <td width='45%'><span class='isi'>$row[nama_ka] - $row[no_ka]</span></td>
-                <td width='30%'><span class='isi'>$row[tujuan]</span></td>
+                <td width='50%'><span class='isi'>$row[nama_ka] - $row[no_ka]</span></td>
+                <td width='25%'><span class='isi'>$row[tujuan]</span></td>
                 <td width='13%' ><span class='isi'>$row[jam_berangkat]</span></td>
                 </tr>
             ";

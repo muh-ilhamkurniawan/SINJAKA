@@ -195,12 +195,12 @@ CSS View
   font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url("Background-Peron.jpg");
+  background-image: url("kroya.jpg");
   background-size: cover;
   height: 100%;
 }
 .table-peron th {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 800;
   padding: 0.5%;
   color: white;
@@ -210,14 +210,14 @@ CSS View
 .table-peron td {
   text-align: center;
   font-weight: bold;
-  font-size: 55px;
-  padding: 0.5%;
+  font-size: 50px;
+  padding: 0.1%;
   background-color: rgba(5, 6, 112, 0.8);
   text-align: center;
   text-transform: uppercase;
 }
 .table-peron .jalur {
-  font-size: 80px;
+  font-size: 70px;
 }
 .table-peron .isi {
   color: rgba(255, 255, 255, 1);
