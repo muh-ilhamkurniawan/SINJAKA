@@ -234,6 +234,7 @@ CSS View
   margin-bottom: 10px;
 }
 .view .konten {
+  z-index: 1;
   text-align: center;
   position: absolute;
   left: 0;
@@ -262,18 +263,20 @@ CSS View
 .view .hari {
   font-size: 33px;
   font-weight: bold;
-  padding-right: 20px;
+  /* padding-right: 20px; */
 }
 .view .jam {
   font-size: 33px;
   font-weight: bold;
-  padding-right: 20px;
+  /* padding-right: 20px; */
 }
 .view .nav-time {
-  padding-top: 20px;
-  text-align: right;
+  /* padding-top: 10px; */
+  text-align: center;
   float: right;
   width: 20%;
+  background-color: white;
+  border-radius: 50%;
 }
 .view .featured-image {
   max-height: 80px;

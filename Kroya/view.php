@@ -1,9 +1,9 @@
 <?php
-if(!isset($_SERVER['HTTP_REFERER'])){
-    // redirect them to your desired location
-    header('location: error.php');
-    exit;
-}
+// if(!isset($_SERVER['HTTP_REFERER'])){
+//     // redirect them to your desired location
+//     header('location: error.php');
+//     exit;
+// }
 
     //fungsi auto refresh
     include "koneksi.php";
@@ -67,9 +67,9 @@ if(!isset($_SERVER['HTTP_REFERER'])){
             echo "<span class='hari'>{$hariBahasaIndonesia}</span>";
             ?> 
             <br/> 
-            <span style='padding-right: 20px;' class='hari'> <?php echo date('d-m-Y'); ?></span>
+            <span  class='hari'> <?php echo date('d-m-Y'); ?></span>
             <br/> 
-            <span id="jam" class="jam" style='padding-right: 20px;'></span>
+            <span id="jam" class="jam" ></span>
             <!-- menampilkan waktu secara live time -->
             <script type="text/javascript">
                 const str = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jayapura' });

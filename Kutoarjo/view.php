@@ -1,10 +1,4 @@
 <?php
-if(!isset($_SERVER['HTTP_REFERER'])){
-    // redirect them to your desired location
-    header('location: error.php');
-    exit;
-}
-
     //fungsi auto refresh
     include "koneksi.php";
     if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {

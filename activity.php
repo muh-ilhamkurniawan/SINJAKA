@@ -15,7 +15,8 @@ error_reporting(0);
             $daftardata = $_GET["cari"];
             $search = "SELECT * FROM activity_log
                 WHERE  nama_user LIKE '%".$daftardata."%' OR
-                        peran LIKE '%".$daftardata."%'  ORDER BY no desc";				
+                        peran LIKE '%".$daftardata."%' OR
+                        waktu_login LIKE '%".$daftardata."%' ORDER BY no desc";				
                 }else{
                     $search = "SELECT * FROM activity_log ORDER BY no desc";	
         }
